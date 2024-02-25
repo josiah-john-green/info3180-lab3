@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+  <h1 class="title"> Contact Form </h1>
+  
+  <hr>
+
+  <p class="title-description"> Fill in this form to contact site owners. </p>
+
+  {% if error %}
+
+    <p class="error"><strong>Error:</strong> {{ error }}</p>
+  
+  {% endif %}
+
+  <form action="{{ url_for('contact') }}" method="post">
+    {{ form.csrf_token }} 
+
+    <div class="naming">
+      <label class="name-title" for="name">{{ form.name.label }}<span class="required-text"> (Required)</span></label>
+      <p class="name-description"> Please enter your full name. </p>
+      <input type="text" name="name" id="name" required />
+    </div>
+
+    <div class="emailing">
+      <label class="email-title" for="email">{{ form.email.label }}<span class="required-text"> (Required)</span></label>
+      <p class="email-description"> Please enter your e-mail address. </p>
+      <input class="email-area" type="email" name="email" id="email" required/>
+    </div>
+
+    <div class="subjectof">
+      <label class="subject-title" for="subject">{{ form.subject.label }} <span class="required-text"> (Required)</span></label>
+      <p class="subject-description"> Please enter the subject for your message. </p>
+      <input class="subject-area" type="text" name="subject" id="subject" required/>
+    </div>
+
+    <div class="messaging"> 
+      <label class="message-title" for="message">{{ form.message.label }}<span class="required-text"> (Required)</span></label>
+      <p class="message-description"> Please enter the message you would like to send. </p>
+      <textarea class="message-area" name="message" id="message" required></textarea>
+    </div>
+
+    <button class="submit" id="btn" type="submit">Send</button>
+  </form>
+
+{% endblock %}

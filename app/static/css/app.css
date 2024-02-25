@@ -1,3 +1,81 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+body 
+{
+    
+    font-family: "Jost", sans-serif;
     padding-top: 5rem;
+
+}
+
+.flashes
+{
+
+    text-decoration: none;
+    text-align: center;
+    background-color: #6fb4f1;
+    color: white;
+    padding: 20px 10px 20px 10px;
+    margin-top: -25px;
+
+}
+
+.title-description
+{
+
+    font-size: 9.6px;
+
+}
+
+.name-title, .subject-title, .message-title, .email-title
+{
+
+    font-weight: bold;
+    font-size: 12px;
+
+}
+
+.required-text
+{
+
+    color: rgb(160, 16, 16);
+
+}
+
+.naming, .emailing, .subjectof, .messaging
+{
+
+    margin: 10px 0px 20px 0px;    
+
+}
+
+.name-description, .subject-description, .message-description, .email-description
+{
+
+    font-size: 9.6px;
+
+}
+
+#btn
+{
+
+    background-color: #227ccb;
+    color: white;
+    font-size: 10.6px;
+    border-radius: 10px;
+    border: transparent;
+    padding: 10px 25px 10px 25px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+}
+
+#btn:hover
+{
+
+
+    background-color: #08457a;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
 }
